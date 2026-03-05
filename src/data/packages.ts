@@ -59,6 +59,6 @@ export const packages: TravelPackage[] = [
       "Day 6: Agra - Agra Fort, Mehtab Bagh, shopping in local bazaar",
       "Day 7: Agra to Delhi, departure",
     ],
-    heroImage: "https://images.unsplash.com/photo-1609416917770-92a7bb815887?w=1200&q=80",
+    heroImage: "https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=1200&q=80",
   },
 ];

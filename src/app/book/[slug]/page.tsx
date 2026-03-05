@@ -24,9 +24,92 @@ export default function BookingPage({ params }: PageProps) {
     specialRequests: "",
   });
 
+  const [errors, setErrors] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    travelDate: "",
+  });
+
+  // Get tomorrow's date for minimum date validation
+  const getTomorrowDate = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    return tomorrow.toISOString().split('T')[0];
+  };
+
+  // Get max date (1 year from now)
+  const getMaxDate = () => {
+    const maxDate = new Date();
+    maxDate.setFullYear(maxDate.getFullYear() + 1);
+    return maxDate.toISOString().split('T')[0];
+  };
+
   if (!packageData) {
     notFound();
   }
+
+  const validateForm = () => {
+    const newErrors = {
+      fullName: "",
+      email: "",
+      phone: "",
+      travelDate: "",
+    };
+
+    let isValid = true;
+
+    // Validate Full Name
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+      isValid = false;
+    } else if (formData.fullName.trim().length < 2) {
+      newErrors.fullName = "Name must be at least 2 characters";
+      isValid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(formData.fullName)) {
+      newErrors.fullName = "Name can only contain letters and spaces";
+      isValid = false;
+    }
+
+    // Validate Email
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+      isValid = false;
+    }
+
+    // Validate Phone
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+      isValid = false;
+    } else if (!/^[+]?[0-9]{10,15}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = "Phone must be 10-15 digits (optional + prefix)";
+      isValid = false;
+    }
+
+    // Validate Travel Date
+    if (!formData.travelDate) {
+      newErrors.travelDate = "Travel date is required";
+      isValid = false;
+    } else {
+      const selectedDate = new Date(formData.travelDate);
+      const tomorrow = new Date(getTomorrowDate());
+      const maxDate = new Date(getMaxDate());
+
+      if (selectedDate < tomorrow) {
+        newErrors.travelDate = "Travel date must be at least tomorrow";
+        isValid = false;
+      } else if (selectedDate > maxDate) {
+        newErrors.travelDate = "Travel date cannot be more than 1 year from now";
+        isValid = false;
+      }
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -36,10 +119,23 @@ export default function BookingPage({ params }: PageProps) {
       ...prev,
       [name]: value,
     }));
+
+    // Clear error for this field when user starts typing
+    if (errors[name as keyof typeof errors]) {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
 
     const bookingData = {
       package: packageData.title,
@@ -165,9 +261,16 @@ export default function BookingPage({ params }: PageProps) {
                 required
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+                  errors.fullName
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                }`}
                 placeholder="Enter your full name"
               />
+              {errors.fullName && (
+                <p className="mt-1 text-sm text-red-600">{errors.fullName}</p>
+              )}
             </div>
 
             {/* Email */}
@@ -185,9 +288,16 @@ export default function BookingPage({ params }: PageProps) {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+                  errors.email
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                }`}
                 placeholder="your.email@example.com"
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+              )}
             </div>
 
             {/* Phone Number */}
@@ -205,9 +315,16 @@ export default function BookingPage({ params }: PageProps) {
                 required
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+                  errors.phone
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                }`}
                 placeholder="+91 98765 43210"
               />
+              {errors.phone && (
+                <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+              )}
             </div>
 
             {/* Travel Date and Number of Travelers Grid */}
@@ -225,10 +342,19 @@ export default function BookingPage({ params }: PageProps) {
                   id="travelDate"
                   name="travelDate"
                   required
+                  min={getTomorrowDate()}
+                  max={getMaxDate()}
                   value={formData.travelDate}
                   onChange={handleInputChange}
-                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
+                    errors.travelDate
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                      : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                  }`}
                 />
+                {errors.travelDate && (
+                  <p className="mt-1 text-sm text-red-600">{errors.travelDate}</p>
+                )}
               </div>
 
               {/* Number of Travelers */}
@@ -268,11 +394,15 @@ export default function BookingPage({ params }: PageProps) {
                 id="specialRequests"
                 name="specialRequests"
                 rows={4}
+                maxLength={500}
                 value={formData.specialRequests}
                 onChange={handleInputChange}
                 className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Any special requirements or requests? (optional)"
+                placeholder="Any special requirements or requests? (optional, max 500 characters)"
               />
+              <p className="mt-1 text-sm text-gray-500">
+                {formData.specialRequests.length}/500 characters
+              </p>
             </div>
 
             {/* Submit Button */}
