@@ -195,32 +195,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Call to Action Section */}
-      <section className="bg-linear-to-r from-blue-600 to-blue-800 px-6 py-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white md:text-5xl">
-            Ready to Plan Your Dream Trip?
-          </h2>
-          <p className="mt-6 text-xl text-blue-100">
-            Let us help you create unforgettable memories across India
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Link href="/packages">
-              <button className="w-full rounded-lg bg-white px-10 py-4 text-lg font-semibold text-blue-600 shadow-lg transition-all hover:bg-gray-100 hover:scale-105 hover:shadow-xl sm:w-auto">
-                Explore Packages
-              </button>
-            </Link>
-            <Link href="/contact">
-              <button className="w-full rounded-lg border-2 border-white bg-transparent px-10 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-white hover:text-blue-600 hover:scale-105 hover:shadow-xl sm:w-auto">
-                Contact Us
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
