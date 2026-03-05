@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for Aureo Travel",
+  description: "Privacy policy for AureoTravels",
 };
 
 export default function PrivacyPage() {

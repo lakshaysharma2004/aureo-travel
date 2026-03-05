@@ -80,7 +80,7 @@ export default function HeroCarousel() {
       <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pt-16">
         <div className="max-w-4xl text-center">
           <h1 className="text-5xl font-bold leading-tight text-white md:text-7xl drop-shadow-lg">
-            Explore India with Aureo Travel
+            Explore India with AureoTravels
           </h1>
           <p className="mt-6 text-xl text-white md:text-2xl drop-shadow-md">
             Discover the Golden Triangle and Rajasthan's royal heritage across Delhi, Agra, Jaipur, Udaipur, and Jodhpur
@@ -97,17 +97,14 @@ export default function HeroCarousel() {
         .swiper-button-prev,
         .swiper-button-next {
           color: white !important;
-          background: rgba(0, 0, 0, 0.5) !important;
           width: 50px !important;
           height: 50px !important;
-          border-radius: 50% !important;
           transition: all 0.3s ease !important;
           z-index: 20 !important;
         }
         
         .swiper-button-prev:hover,
         .swiper-button-next:hover {
-          background: rgba(0, 0, 0, 0.8) !important;
           transform: scale(1.15) !important;
         }
         

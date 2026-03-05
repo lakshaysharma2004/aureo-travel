@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aureo Travel - Explore India's Hidden Gems",
+  title: "AureoTravels - Explore India's Hidden Gems",
   description: "Discover incredible travel packages, destinations, and inspiring stories across India",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

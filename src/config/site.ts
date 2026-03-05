@@ -54,7 +54,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   company: {
-    name: "Aureo Travel",
+    name: "AureoTravels",
     tagline: "Making travel dreams come true since 2020",
     description:
       "Discover India's hidden gems with curated travel experiences. We craft unforgettable journeys across incredible destinations.",

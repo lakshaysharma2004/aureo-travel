@@ -9,7 +9,7 @@ import TravelSearchBar from "@/components/TravelSearchBar";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata = {
-  title: "Aureo Travel | Premium Travel Experiences",
+  title: "AureoTravels | Premium Travel Experiences",
   description: "Explore the Golden Triangle and Rajasthan with curated travel packages to Delhi, Agra, Jaipur, Udaipur, and Jodhpur",
 };
 
@@ -152,7 +152,7 @@ export default function Home() {
               What Our Travelers Say
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Discover why thousands choose Aureo Travel for their journeys
+              Discover why thousands choose AureoTravels for their journeys
             </p>
           </div>
 

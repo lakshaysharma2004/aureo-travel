@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of service for Aureo Travel",
+  description: "Terms of service for AureoTravels",
 };
 
 export default function TermsPage() {

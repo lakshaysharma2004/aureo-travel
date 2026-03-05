@@ -2,7 +2,7 @@ import { cities } from "@/data/cities";
 import CityCard from "@/components/CityCard";
 
 export const metadata = {
-  title: "Destinations | Aureo Travel",
+  title: "Destinations | AureoTravels",
   description: "Explore our premium travel destinations across India",
 };
 

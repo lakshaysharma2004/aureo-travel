@@ -36,7 +36,7 @@ export default function TravelSearchBar() {
     <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="rounded-xl bg-white p-8 shadow-2xl"
+        className="rounded-xl bg-white p-8 shadow-2xl transition-all duration-300 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] hover:-translate-y-2"
       >
         <div className="grid gap-4 md:grid-cols-4 md:gap-6">
           {/* Destination Input */}
