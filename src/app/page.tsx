@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { cities } from "@/data/cities";
 import CityCard from "@/components/CityCard";
+import TravelSearchBar from "@/components/TravelSearchBar";
 
 export const metadata = {
   title: "Aureo Travel | Premium Travel Experiences",
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-24 text-white">
+      <section className="relative min-h-screen bg-linear-to-r from-blue-600 to-blue-800 px-6 py-24 text-white">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-5xl font-bold leading-tight md:text-7xl">
@@ -22,11 +23,17 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-xl md:text-2xl text-blue-100">
               Discover curated premium travel experiences across India's most iconic destinations. From the mystique of the Taj Mahal to the colorful streets of Jaipur.
             </p>
-            <Link href="/destinations">
-              <button className="mt-8 rounded-lg bg-white px-8 py-3 text-lg font-semibold text-blue-600 transition-transform hover:scale-105 hover:shadow-lg">
-                Explore Destinations
-              </button>
-            </Link>
+
+            {/* Travel Search Bar */}
+            <TravelSearchBar />
+
+            <div className="mt-8">
+              <Link href="/destinations">
+                <button className="rounded-lg border-2 border-white px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-blue-600">
+                  Browse All Destinations
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
