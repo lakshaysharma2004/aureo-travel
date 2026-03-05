@@ -33,10 +33,10 @@ export default function TravelSearchBar() {
   };
 
   return (
-    <div className="mt-12 w-full max-w-5xl">
+    <div className="w-full">
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl bg-white p-6 shadow-2xl md:p-8"
+        className="rounded-xl bg-white p-8 shadow-2xl"
       >
         <div className="grid gap-4 md:grid-cols-4 md:gap-6">
           {/* Destination Input */}

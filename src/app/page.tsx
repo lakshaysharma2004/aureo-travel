@@ -6,6 +6,7 @@ import CityCard from "@/components/CityCard";
 import PackageCard from "@/components/PackageCard";
 import StoryCard from "@/components/StoryCard";
 import TravelSearchBar from "@/components/TravelSearchBar";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata = {
   title: "Aureo Travel | Premium Travel Experiences",
@@ -42,66 +43,14 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-linear-to-r from-blue-600 to-blue-800 px-6 py-24 text-white">
+    <main className="w-full bg-gray-50">
+      {/* Hero Carousel */}
+      <HeroCarousel />
+
+      {/* Floating Trip Planner */}
+      <section className="relative z-10 -mt-24 px-6 pb-12">
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col items-center text-center">
-            <h1 className="text-5xl font-bold leading-tight md:text-7xl">
-              Explore India with Aureo Travel
-            </h1>
-            <p className="mt-6 max-w-2xl text-xl md:text-2xl text-blue-100">
-              Discover curated premium travel experiences across India's most iconic destinations. From the mystique of the Taj Mahal to the colorful streets of Jaipur.
-            </p>
-
-            {/* Travel Search Bar */}
-            <TravelSearchBar />
-
-            {/* Popular Destinations */}
-            <div className="mt-8">
-              <p className="mb-4 text-sm font-medium text-blue-100">Popular Destinations</p>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/packages?destination=Delhi" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Delhi
-                  </span>
-                </Link>
-                <Link href="/packages?destination=Agra" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Agra
-                  </span>
-                </Link>
-                <Link href="/packages?destination=Jaipur" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Jaipur
-                  </span>
-                </Link>
-                <Link href="/packages?destination=Goa" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Goa
-                  </span>
-                </Link>
-                <Link href="/packages?destination=Kerala" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Kerala
-                  </span>
-                </Link>
-                <Link href="/packages?destination=Rajasthan" className="group">
-                  <span className="inline-block rounded-full bg-white/20 backdrop-blur-sm px-5 py-2 text-sm font-medium text-white transition-all hover:bg-white/30 hover:scale-105">
-                    Rajasthan
-                  </span>
-                </Link>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <Link href="/destinations">
-                <button className="rounded-lg border-2 border-white px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-blue-600">
-                  Browse All Destinations
-                </button>
-              </Link>
-            </div>
-          </div>
+          <TravelSearchBar />
         </div>
       </section>
 
