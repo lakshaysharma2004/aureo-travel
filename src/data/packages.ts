@@ -27,7 +27,7 @@ export const packages: TravelPackage[] = [
       "Day 4: Jaipur local sightseeing - Jantar Mantar and Nahargarh Fort",
       "Day 5: Return to Delhi, departure",
     ],
-    heroImage: "/public/golden-triangle-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1200&q=80",
   },
   {
     slug: "royal-rajasthan-experience",
@@ -59,6 +59,6 @@ export const packages: TravelPackage[] = [
       "Day 6: Agra - Agra Fort, Mehtab Bagh, shopping in local bazaar",
       "Day 7: Agra to Delhi, departure",
     ],
-    heroImage: "/public/royal-rajasthan-hero.jpg",
+    heroImage: "https://images.unsplash.com/photo-1609416917770-92a7bb815887?w=1200&q=80",
   },
 ];
