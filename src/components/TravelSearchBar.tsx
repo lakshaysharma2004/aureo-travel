@@ -54,7 +54,7 @@ export default function TravelSearchBar() {
               value={searchData.destination}
               onChange={handleChange}
               placeholder="Where to?"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -71,7 +71,7 @@ export default function TravelSearchBar() {
               name="duration"
               value={searchData.duration}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               <option value="">Any Duration</option>
               <option value="3-5">3-5 Days</option>
@@ -93,7 +93,7 @@ export default function TravelSearchBar() {
               name="budget"
               value={searchData.budget}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 px-4 py-3 text-slate-900 transition-colors focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               <option value="">Any Budget</option>
               <option value="budget">Budget</option>
@@ -109,7 +109,7 @@ export default function TravelSearchBar() {
             </label>
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-teal-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-300"
             >
               <svg
                 className="h-5 w-5"

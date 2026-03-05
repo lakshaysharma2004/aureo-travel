@@ -59,7 +59,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold text-gray-900">
-              Explore Our Destinations
+              Your Next Destination
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Journey through the Golden Triangle and royal Rajasthan
@@ -76,7 +76,7 @@ export default function Home() {
           {/* View All Link */}
           <div className="mt-12 text-center">
             <Link href="/destinations">
-              <button className="rounded-lg border-2 border-blue-600 px-8 py-3 text-lg font-semibold text-blue-600 transition-colors hover:bg-blue-600 hover:text-white">
+              <button className="rounded-lg border-2 border-teal-600 px-8 py-3 text-lg font-semibold text-teal-600 transition-colors hover:bg-teal-700 hover:text-white">
                 View All Destinations
               </button>
             </Link>
@@ -106,7 +106,7 @@ export default function Home() {
           {/* View All Packages Button */}
           <div className="mt-12 text-center">
             <Link href="/packages">
-              <button className="rounded-lg bg-blue-600 px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-blue-700 hover:scale-105 hover:shadow-lg">
+              <button className="rounded-lg bg-teal-600 px-8 py-3 text-lg font-semibold text-white transition-all hover:bg-teal-700 hover:scale-105 hover:shadow-lg">
                 View All Packages
               </button>
             </Link>
@@ -136,7 +136,7 @@ export default function Home() {
           {/* View All Stories Button */}
           <div className="mt-12 text-center">
             <Link href="/stories">
-              <button className="rounded-lg border-2 border-blue-600 px-8 py-3 text-lg font-semibold text-blue-600 transition-all hover:bg-blue-600 hover:text-white hover:scale-105">
+              <button className="rounded-lg border-2 border-orange-500 px-8 py-3 text-lg font-semibold text-orange-500 transition-all hover:bg-orange-600 hover:text-white hover:scale-105">
                 View All Stories
               </button>
             </Link>

@@ -9,7 +9,7 @@ export default function ContactPage() {
             alt="Contact Us"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-br from-green-900/70 via-teal-900/60 to-blue-900/70" />
+          <div className="absolute inset-0 bg-linear-to-br from-teal-900/70 via-teal-800/60 to-slate-900/70" />
         </div>
         <div className="relative z-10 flex h-full items-center">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -52,9 +52,9 @@ export default function ContactPage() {
           {/* Phone */}
           <div className="rounded-lg bg-white p-6 text-center shadow-md">
             <div className="mb-4 flex justify-center">
-              <div className="rounded-full bg-blue-100 p-4">
+              <div className="rounded-full bg-teal-50 p-4">
                 <svg
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-teal-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -75,9 +75,9 @@ export default function ContactPage() {
           {/* Address */}
           <div className="rounded-lg bg-white p-6 text-center shadow-md">
             <div className="mb-4 flex justify-center">
-              <div className="rounded-full bg-blue-100 p-4">
+              <div className="rounded-full bg-teal-50 p-4">
                 <svg
-                  className="h-8 w-8 text-blue-600"
+                  className="h-8 w-8 text-teal-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

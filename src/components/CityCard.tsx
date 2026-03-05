@@ -21,7 +21,7 @@ export default function CityCard({ city }: CityCardProps) {
           
           {/* Best Time Badge */}
           <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-0 translate-x-4">
-            <span className="rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-xs font-bold text-blue-600 shadow-lg">
+            <span className="rounded-full bg-white/90 backdrop-blur-sm px-4 py-2 text-xs font-bold text-teal-600 shadow-lg">
               Best: {city.bestTimeToVisit}
             </span>
           </div>
@@ -29,8 +29,8 @@ export default function CityCard({ city }: CityCardProps) {
 
         {/* Content */}
         <div className="bg-white p-6">
-          <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{city.name}</h3>
-          <p className="mt-3 line-clamp-2 text-sm text-gray-600 leading-relaxed">
+          <h3 className="text-2xl font-bold text-slate-800 group-hover:text-teal-600 transition-colors duration-300">{city.name}</h3>
+          <p className="mt-3 line-clamp-2 text-sm text-slate-600 leading-relaxed">
             {city.description}
           </p>
 
@@ -39,7 +39,7 @@ export default function CityCard({ city }: CityCardProps) {
             {city.attractions.slice(0, 2).map((attraction, index) => (
               <span
                 key={index}
-                className="inline-block rounded-full bg-blue-50 px-3 py-1 text-xs text-blue-700 transform transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-110"
+                className="inline-block rounded-full bg-orange-50 px-3 py-1 text-xs text-orange-600 transform transition-all duration-300 hover:bg-orange-500 hover:text-white hover:scale-110"
               >
                 {attraction}
               </span>
@@ -47,7 +47,7 @@ export default function CityCard({ city }: CityCardProps) {
           </div>
 
           {/* CTA */}
-          <button className="mt-6 w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg transform group-hover:scale-105">
+          <button className="mt-6 w-full rounded-lg bg-teal-600 py-3 font-semibold text-white transition-all duration-300 hover:bg-teal-700 hover:shadow-lg transform group-hover:scale-105">
             Explore Destination →
           </button>
         </div>

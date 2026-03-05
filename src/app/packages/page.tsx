@@ -51,7 +51,7 @@ export default function PackagesPage() {
             alt="Travel Packages"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-br from-orange-900/70 via-red-900/60 to-pink-900/70" />
+          <div className="absolute inset-0 bg-linear-to-br from-teal-900/70 via-teal-800/60 to-slate-900/70" />
         </div>
         <div className="relative z-10 flex h-full items-center">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -71,17 +71,17 @@ export default function PackagesPage() {
           <div className="mb-6 flex flex-wrap gap-3 items-center">
             <span className="text-sm font-medium text-gray-700">Active filters:</span>
             {destination && (
-              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium">
+              <span className="rounded-full bg-teal-50 px-4 py-1 text-sm text-teal-700 font-medium">
                 📍 {destination}
               </span>
             )}
             {duration && (
-              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium">
+              <span className="rounded-full bg-teal-50 px-4 py-1 text-sm text-teal-700 font-medium">
                 📅 {duration} days
               </span>
             )}
             {budget && (
-              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium capitalize">
+              <span className="rounded-full bg-teal-50 px-4 py-1 text-sm text-teal-700 font-medium capitalize">
                 💰 {budget}
               </span>
             )}
@@ -134,7 +134,7 @@ export default function PackagesPage() {
                 </p>
                 <a
                   href="/packages"
-                  className="mt-6 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
+                  className="mt-6 rounded-lg bg-teal-600 px-6 py-3 text-white hover:bg-teal-700 transition-colors"
                 >
                   Clear Filters
                 </a>

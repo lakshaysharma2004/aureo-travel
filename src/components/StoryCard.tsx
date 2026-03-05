@@ -34,7 +34,7 @@ export default function StoryCard({ story }: StoryCardProps) {
           
           {/* Date Badge - appears on hover */}
           <div className="absolute left-4 bottom-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-y-0 translate-y-2">
-            <span className="rounded-full bg-blue-600 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white shadow-lg">
+            <span className="rounded-full bg-teal-600 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white shadow-lg">
               {formattedDate}
             </span>
           </div>
@@ -43,13 +43,13 @@ export default function StoryCard({ story }: StoryCardProps) {
         {/* Content */}
         <div className="p-6">
           {/* Title */}
-          <h3 className="mb-3 text-xl font-bold leading-tight text-gray-900 transition-colors duration-300 group-hover:text-blue-600">
+          <h3 className="mb-3 text-xl font-bold leading-tight text-slate-800 transition-colors duration-300 group-hover:text-teal-600">
             {story.title}
           </h3>
 
           {/* Author and Date */}
-          <div className="mb-4 flex items-center gap-4 text-sm text-gray-600">
-            <div className="flex items-center gap-2 transition-all duration-300 group-hover:text-blue-600">
+          <div className="mb-4 flex items-center gap-4 text-sm text-slate-600">
+            <div className="flex items-center gap-2 transition-all duration-300 group-hover:text-teal-600">
               <svg
                 className="h-4 w-4"
                 fill="none"
@@ -68,7 +68,7 @@ export default function StoryCard({ story }: StoryCardProps) {
           </div>
 
           {/* Read More Link */}
-          <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all duration-300">
+          <div className="flex items-center gap-2 text-teal-600 font-semibold group-hover:gap-4 transition-all duration-300">
             <span className="group-hover:underline">Read More</span>
             <svg
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2"

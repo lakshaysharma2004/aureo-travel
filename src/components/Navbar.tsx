@@ -31,7 +31,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center">
             <div className="flex items-center gap-2">
               <svg
-                className="h-8 w-8 text-blue-600"
+                className="h-8 w-8 text-teal-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -57,8 +57,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`font-medium transition-colors ${
                   isActive(link.href)
-                    ? "text-blue-600"
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "text-teal-600"
+                    : "text-slate-700 hover:text-teal-600"
                 }`}
               >
                 {link.name}
@@ -69,7 +69,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 md:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100 hover:text-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 md:hidden"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -115,8 +115,8 @@ export default function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`font-medium transition-colors ${
                     isActive(link.href)
-                      ? "text-blue-600"
-                      : "text-gray-700 hover:text-blue-600"
+                      ? "text-teal-600"
+                      : "text-slate-700 hover:text-teal-600"
                   }`}
                 >
                   {link.name}

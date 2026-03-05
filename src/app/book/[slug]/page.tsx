@@ -210,7 +210,7 @@ export default function BookingPage({ params }: PageProps) {
                 </div>
                 <div className="flex items-center gap-3">
                   <svg
-                    className="h-6 w-6 text-blue-600"
+                    className="h-6 w-6 text-teal-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -224,7 +224,7 @@ export default function BookingPage({ params }: PageProps) {
                   </svg>
                   <div>
                     <p className="text-sm text-gray-600">Price per person</p>
-                    <p className="text-2xl font-bold text-blue-600">
+                    <p className="text-2xl font-bold text-teal-600">
                       ₹{packageData.price.toLocaleString("en-IN")}
                     </p>
                   </div>
@@ -264,7 +264,7 @@ export default function BookingPage({ params }: PageProps) {
                 className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
                   errors.fullName
                     ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                    : "border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 }`}
                 placeholder="Enter your full name"
               />
@@ -291,7 +291,7 @@ export default function BookingPage({ params }: PageProps) {
                 className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
                   errors.email
                     ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                    : "border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 }`}
                 placeholder="your.email@example.com"
               />
@@ -318,7 +318,7 @@ export default function BookingPage({ params }: PageProps) {
                 className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
                   errors.phone
                     ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                    : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                    : "border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                 }`}
                 placeholder="+91 98765 43210"
               />
@@ -349,7 +349,7 @@ export default function BookingPage({ params }: PageProps) {
                   className={`mt-2 w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 ${
                     errors.travelDate
                       ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+                      : "border-gray-300 focus:border-teal-500 focus:ring-teal-500"
                   }`}
                 />
                 {errors.travelDate && (
@@ -371,7 +371,7 @@ export default function BookingPage({ params }: PageProps) {
                   required
                   value={formData.numTravelers}
                   onChange={handleInputChange}
-                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                     <option key={num} value={num}>
@@ -397,7 +397,7 @@ export default function BookingPage({ params }: PageProps) {
                 maxLength={500}
                 value={formData.specialRequests}
                 onChange={handleInputChange}
-                className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 placeholder="Any special requirements or requests? (optional, max 500 characters)"
               />
               <p className="mt-1 text-sm text-gray-500">
@@ -409,7 +409,7 @@ export default function BookingPage({ params }: PageProps) {
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full rounded-lg bg-blue-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                className="w-full rounded-lg bg-teal-600 py-4 text-lg font-semibold text-white hover:bg-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-300 transition-colors"
               >
                 Submit Booking Request
               </button>

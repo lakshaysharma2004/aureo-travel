@@ -47,7 +47,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
           </div>
           <div className="text-right">
             <p className="text-sm text-gray-600">Price</p>
-            <p className="text-3xl font-bold text-blue-600">
+            <p className="text-3xl font-bold text-teal-600">
               ₹{packageData.price.toLocaleString("en-IN")}
             </p>
           </div>
@@ -62,7 +62,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
             {packageData.cities.map((city, index) => (
               <span
                 key={index}
-                className="rounded-lg bg-blue-100 px-4 py-2 text-lg font-medium capitalize text-blue-700"
+                className="rounded-lg bg-orange-50 px-4 py-2 text-lg font-medium capitalize text-orange-600 border border-orange-200"
               >
                 {city}
               </span>
@@ -113,9 +113,9 @@ export default async function PackageDetailPage({ params }: PageProps) {
             {packageData.itinerary.map((day, index) => (
               <div
                 key={index}
-                className="flex items-start rounded-lg bg-white p-5 shadow-sm"
+                className="flex items-start rounded-lg bg-white p-5 shadow-sm border border-slate-200"
               >
-                <span className="mr-4 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 text-lg font-bold text-white">
+                <span className="mr-4 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-600 text-lg font-bold text-white">
                   {index + 1}
                 </span>
                 <span className="pt-1 text-lg text-gray-800">{day}</span>
@@ -127,7 +127,7 @@ export default async function PackageDetailPage({ params }: PageProps) {
         {/* CTA Button */}
         <div className="mb-8 rounded-lg bg-white p-6 shadow-md">
           <Link href={`/book/${packageData.slug}`}>
-            <button className="w-full rounded-lg bg-blue-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700">
+            <button className="w-full rounded-lg bg-teal-600 py-4 text-lg font-semibold text-white hover:bg-teal-700 transition-colors">
               Book Now
             </button>
           </Link>

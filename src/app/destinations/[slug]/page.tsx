@@ -24,7 +24,7 @@ export default async function CityDetailPage({ params }: PageProps) {
   ).slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-linear-to-b from-blue-50 via-white to-orange-50">
+    <main className="min-h-screen bg-slate-50">
       {/* Hero Section */}
       <section className="relative h-[60vh] w-full">
         <div className="absolute inset-0">
@@ -34,7 +34,7 @@ export default async function CityDetailPage({ params }: PageProps) {
             className="h-full w-full object-cover"
           />
           {/* Vibrant Gradient Overlay */}
-          <div className="absolute inset-0 bg-linear-to-br from-purple-900/60 via-blue-900/50 to-orange-900/60" />
+          <div className="absolute inset-0 bg-linear-to-br from-teal-900/60 via-teal-800/50 to-slate-900/60" />
         </div>
 
         {/* Hero Content */}
@@ -51,18 +51,18 @@ export default async function CityDetailPage({ params }: PageProps) {
       </section>
 
       {/* Breadcrumb Navigation */}
-      <div className="border-b-2 border-gradient-to-r from-blue-400 to-orange-400 bg-white shadow-sm">
+      <div className="border-b border-slate-200 bg-white shadow-sm">
         <div className="mx-auto max-w-7xl px-6 py-4">
-          <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
+          <nav className="flex items-center space-x-2 text-sm text-slate-600">
+            <Link href="/" className="hover:text-teal-600 transition-colors font-medium">
               Home
             </Link>
-            <span className="text-blue-400">→</span>
-            <Link href="/destinations" className="hover:text-blue-600 transition-colors font-medium">
+            <span className="text-slate-400">→</span>
+            <Link href="/destinations" className="hover:text-teal-600 transition-colors font-medium">
               Destinations
             </Link>
-            <span className="text-blue-400">→</span>
-            <span className="font-semibold text-gray-900">{city.name}</span>
+            <span className="text-slate-400">→</span>
+            <span className="font-semibold text-slate-900">{city.name}</span>
           </nav>
         </div>
       </div>
@@ -73,14 +73,14 @@ export default async function CityDetailPage({ params }: PageProps) {
           {/* Left Column - Main Content */}
           <div className="space-y-8">
             {/* About Section */}
-            <section className="rounded-2xl bg-linear-to-br from-white via-blue-50 to-white p-8 shadow-xl border-2 border-blue-100 hover:shadow-2xl transition-all duration-300">
+            <section className="rounded-xl bg-white p-8 shadow-md border border-slate-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-linear-to-r from-blue-600 to-orange-500 rounded-full"></div>
-                <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-orange-600">
+                <div className="h-1 w-10 bg-teal-500 rounded-full"></div>
+                <h2 className="text-3xl font-bold text-slate-800">
                   About {city.name}
                 </h2>
               </div>
-              <div className="text-lg leading-relaxed text-gray-800 space-y-4">
+              <div className="text-lg leading-relaxed text-slate-700 space-y-4">
                 {city.description.split('\n').map((paragraph, index) => (
                   paragraph && <p key={index}>{paragraph}</p>
                 ))}
@@ -88,10 +88,10 @@ export default async function CityDetailPage({ params }: PageProps) {
             </section>
 
             {/* Top Attractions */}
-            <section className="rounded-2xl bg-linear-to-br from-white via-orange-50 to-white p-8 shadow-xl border-2 border-orange-100 hover:shadow-2xl transition-all duration-300">
+            <section className="rounded-xl bg-white p-8 shadow-md border border-slate-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-linear-to-r from-orange-500 to-pink-500 rounded-full"></div>
-                <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-orange-600 to-pink-600">
+                <div className="h-1 w-10 bg-teal-500 rounded-full"></div>
+                <h2 className="text-3xl font-bold text-slate-800">
                   Top Attractions
                 </h2>
               </div>
@@ -99,13 +99,13 @@ export default async function CityDetailPage({ params }: PageProps) {
                 {city.attractions.map((attraction, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-3 rounded-xl border-2 border-orange-200 p-4 bg-white transition-all hover:border-orange-400 hover:shadow-lg hover:scale-105 hover:-translate-y-1 duration-300"
+                    className="flex items-start gap-3 rounded-xl border border-slate-200 p-4 bg-white hover:border-teal-500 hover:shadow-md hover:scale-105 transition-all duration-300"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br from-orange-500 to-pink-500 text-white font-bold shrink-0 shadow-md">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-600 text-white font-bold shrink-0 shadow-md">
                       {index + 1}
                     </div>
                     <div className="pt-1">
-                      <p className="font-semibold text-gray-900">{attraction}</p>
+                      <p className="font-semibold text-slate-900">{attraction}</p>
                     </div>
                   </div>
                 ))}
@@ -113,17 +113,17 @@ export default async function CityDetailPage({ params }: PageProps) {
             </section>
 
             {/* Social Share Section */}
-            <section className="rounded-2xl bg-linear-to-br from-white via-purple-50 to-white p-8 shadow-xl border-2 border-purple-100 hover:shadow-2xl transition-all duration-300">
+            <section className="rounded-xl bg-white p-8 shadow-md border border-slate-200">
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-purple-600 to-pink-600">Share This Destination</h3>
+                <div className="h-1 w-10 bg-teal-500 rounded-full"></div>
+                <h3 className="text-2xl font-bold text-slate-800">Share This Destination</h3>
               </div>
               <div className="flex gap-3 flex-wrap">
                 <a
                   href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-5 py-3 text-white transition-all hover:from-blue-700 hover:to-blue-800 hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="flex items-center gap-2 rounded-xl bg-teal-600 px-5 py-3 text-white hover:bg-teal-700 hover:scale-105 shadow-lg hover:shadow-xl transition-all"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -159,13 +159,13 @@ export default async function CityDetailPage({ params }: PageProps) {
           {/* Right Sidebar */}
           <aside className="space-y-6">
             {/* Explore More Card */}
-            <div className="rounded-2xl bg-linear-to-br from-white via-indigo-50 to-white p-6 shadow-xl border-2 border-indigo-200 sticky top-6">
-              <h3 className="mb-6 text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600">
+            <div className="rounded-xl bg-white p-6 shadow-md border border-slate-200 sticky top-6">
+              <h3 className="mb-6 text-2xl font-bold text-slate-800">
                 Explore More
               </h3>
               
               {/* Best Time to Visit */}
-              <div className="mb-6 p-4 rounded-xl bg-linear-to-br from-amber-100 to-orange-100 border-2 border-amber-300 shadow-md">
+              <div className="mb-6 p-4 rounded-xl bg-orange-50 border border-orange-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-2">
                   <svg className="h-8 w-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -180,9 +180,9 @@ export default async function CityDetailPage({ params }: PageProps) {
               <div className="space-y-3">
                 <Link
                   href={`/packages?destination=${city.slug}`}
-                  className="flex items-center gap-3 rounded-xl border-2 border-indigo-200 p-3 bg-white transition-all hover:border-indigo-400 hover:bg-indigo-50 hover:scale-105 hover:shadow-lg"
+                  className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 bg-white hover:border-teal-500 hover:bg-slate-50 hover:scale-105 hover:shadow-md transition-all"
                 >
-                  <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                   <div>
@@ -191,8 +191,8 @@ export default async function CityDetailPage({ params }: PageProps) {
                   </div>
                 </Link>
 
-                <div className="flex items-center gap-3 rounded-xl border-2 border-indigo-200 p-3 bg-white">
-                  <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 bg-white">
+                  <svg className="h-6 w-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -204,9 +204,9 @@ export default async function CityDetailPage({ params }: PageProps) {
 
                 <Link
                   href="/stories"
-                  className="flex items-center gap-3 rounded-xl border-2 border-indigo-200 p-3 bg-white transition-all hover:border-indigo-400 hover:bg-indigo-50 hover:scale-105 hover:shadow-lg"
+                  className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 bg-white hover:border-teal-500 hover:bg-slate-50 hover:scale-105 hover:shadow-md transition-all"
                 >
-                  <svg className="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="h-6 w-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                   <div>
@@ -218,7 +218,7 @@ export default async function CityDetailPage({ params }: PageProps) {
 
               {/* CTA Button */}
               <Link href="/contact" className="mt-6 block">
-                <button className="w-full rounded-xl bg-linear-to-r from-indigo-600 to-purple-600 py-4 font-bold text-white transition-all hover:from-indigo-700 hover:to-purple-700 hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="w-full rounded-xl bg-teal-600 py-4 font-bold text-white hover:bg-teal-700 hover:scale-105 shadow-lg hover:shadow-xl transition-all">
                   Plan Your Trip
                 </button>
               </Link>
@@ -246,7 +246,7 @@ export default async function CityDetailPage({ params }: PageProps) {
 
             <div className="mt-8 text-center">
               <Link href="/packages">
-                <button className="rounded-lg border-2 border-blue-600 px-8 py-3 text-lg font-semibold text-blue-600 transition-colors hover:bg-blue-600 hover:text-white">
+                <button className="rounded-lg border-2 border-teal-600 px-8 py-3 text-lg font-semibold text-teal-600 hover:bg-teal-700 hover:text-white transition-colors">
                   View All Packages
                 </button>
               </Link>

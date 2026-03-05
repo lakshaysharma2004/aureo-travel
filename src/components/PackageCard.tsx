@@ -28,7 +28,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
           
           {/* Price Badge */}
           <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-x-0 translate-x-4">
-            <span className="rounded-full bg-blue-600 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white shadow-lg">
+            <span className="rounded-full bg-teal-600 backdrop-blur-sm px-4 py-2 text-xs font-bold text-white shadow-lg">
               ₹{pkg.price.toLocaleString("en-IN")}
             </span>
           </div>
@@ -36,7 +36,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
 
         {/* Content */}
         <div className="bg-white p-6">
-          <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{pkg.title}</h3>
+          <h3 className="text-xl font-bold text-slate-800 group-hover:text-teal-600 transition-colors duration-300">{pkg.title}</h3>
 
           {/* Duration and Price */}
           <div className="mt-4 flex items-center justify-between">
@@ -46,7 +46,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
               </svg>
               <span className="text-sm font-medium">{pkg.duration}</span>
             </div>
-            <span className="text-xl font-bold text-blue-600 group-hover:scale-110 transition-transform duration-300">
+            <span className="text-xl font-bold text-teal-600 group-hover:scale-110 transition-transform duration-300">
               ₹{pkg.price.toLocaleString("en-IN")}
             </span>
           </div>
@@ -56,7 +56,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
             {pkg.cities.slice(0, 3).map((city, index) => (
               <span
                 key={index}
-                className="inline-block rounded-full bg-blue-50 px-3 py-1 text-xs capitalize text-blue-700 transform transition-all duration-300 hover:bg-blue-600 hover:text-white hover:scale-110"
+                className="inline-block rounded-full bg-orange-50 px-3 py-1 text-xs capitalize text-orange-600 transform transition-all duration-300 hover:bg-orange-500 hover:text-white hover:scale-110"
               >
                 {city}
               </span>
@@ -64,7 +64,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
           </div>
 
           {/* CTA */}
-          <button className="mt-6 w-full rounded-lg bg-blue-600 py-3 font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:shadow-lg transform group-hover:scale-105">
+          <button className="mt-6 w-full rounded-lg bg-teal-600 py-3 font-semibold text-white transition-all duration-300 hover:bg-teal-700 hover:shadow-lg transform group-hover:scale-105">
             View Details →
           </button>
         </div>
