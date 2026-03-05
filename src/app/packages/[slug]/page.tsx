@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { packages } from "@/data/packages";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{
@@ -125,9 +126,11 @@ export default async function PackageDetailPage({ params }: PageProps) {
 
         {/* CTA Button */}
         <div className="mb-8 rounded-lg bg-white p-6 shadow-md">
-          <button className="w-full rounded-lg bg-blue-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700">
-            Book Now
-          </button>
+          <Link href={`/book/${packageData.slug}`}>
+            <button className="w-full rounded-lg bg-blue-600 py-4 text-lg font-semibold text-white transition-colors hover:bg-blue-700">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </main>
