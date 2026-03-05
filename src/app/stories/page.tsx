@@ -4,20 +4,28 @@ import StoryCard from "@/components/StoryCard";
 export default function StoriesPage() {
   return (
     <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
-      {/* Hero Header */}
-      <div className="bg-linear-to-r from-blue-700 via-blue-600 to-indigo-700 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="mb-4 text-5xl font-bold md:text-6xl">
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] w-full">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=1600&q=90"
+            alt="Travel Stories"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-indigo-900/70 via-purple-900/60 to-pink-900/70" />
+        </div>
+        <div className="relative z-10 flex h-full items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-white drop-shadow-2xl md:text-6xl">
               Travel Stories
             </h1>
-            <p className="mx-auto max-w-2xl text-xl text-blue-100">
+            <p className="mx-auto mt-4 max-w-2xl text-xl text-white drop-shadow-lg">
               Explore inspiring journeys and authentic experiences from travelers
               who've ventured across India's most captivating destinations
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Stories Grid */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

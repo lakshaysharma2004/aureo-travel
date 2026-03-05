@@ -9,13 +9,25 @@ export const metadata = {
 export default function DestinationsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-16 text-white">
-        <div className="mx-auto max-w-6xl">
-          <h1 className="text-4xl font-bold md:text-5xl">Explore Destinations</h1>
-          <p className="mt-4 text-lg text-blue-100">
-            Discover our curated selection of premium travel destinations
-          </p>
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] w-full">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1600&q=90"
+            alt="Explore Destinations"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-blue-900/70 via-indigo-900/60 to-purple-900/70" />
+        </div>
+        <div className="relative z-10 flex h-full items-center">
+          <div className="mx-auto max-w-6xl px-6 text-center">
+            <h1 className="text-5xl font-bold text-white drop-shadow-2xl md:text-6xl">
+              Explore Destinations
+            </h1>
+            <p className="mt-4 text-xl text-white drop-shadow-lg">
+              Discover our curated selection of premium travel destinations across India
+            </p>
+          </div>
         </div>
       </section>
 

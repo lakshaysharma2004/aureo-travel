@@ -10,11 +10,11 @@ import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata = {
   title: "Aureo Travel | Premium Travel Experiences",
-  description: "Explore India with our curated premium travel experiences",
+  description: "Explore the Golden Triangle and Rajasthan with curated travel packages to Delhi, Agra, Jaipur, Udaipur, and Jodhpur",
 };
 
 export default function Home() {
-  const featuredCities = cities.slice(0, 3);
+  const featuredCities = cities.slice(0, 5);
   const featuredPackages = packages.slice(0, 3);
   const featuredStories = stories.slice(0, 3);
 
@@ -59,10 +59,10 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold text-gray-900">
-              Featured Destinations
+              Explore Our Destinations
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Handpicked cities offering unforgettable experiences
+              Journey through the Golden Triangle and royal Rajasthan
             </p>
           </div>
 

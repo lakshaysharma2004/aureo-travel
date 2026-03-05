@@ -43,36 +43,50 @@ export default function PackagesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <div className="bg-linear-to-r from-blue-600 to-blue-800 py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold md:text-5xl">Travel Packages</h1>
-          <p className="mt-4 text-lg text-blue-100">
-            Discover our carefully curated travel packages for unforgettable experiences
-          </p>
-
-          {/* Active Filters Display */}
-          {hasFilters && (
-            <div className="mt-6 flex flex-wrap gap-3">
-              <span className="text-sm text-blue-200">Active filters:</span>
-              {destination && (
-                <span className="rounded-full bg-white/20 px-4 py-1 text-sm backdrop-blur-sm">
-                  📍 {destination}
-                </span>
-              )}
-              {duration && (
-                <span className="rounded-full bg-white/20 px-4 py-1 text-sm backdrop-blur-sm">
-                  📅 {duration} days
-                </span>
-              )}
-              {budget && (
-                <span className="rounded-full bg-white/20 px-4 py-1 text-sm capitalize backdrop-blur-sm">
-                  💰 {budget}
-                </span>
-              )}
-            </div>
-          )}
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] w-full">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=90"
+            alt="Travel Packages"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-orange-900/70 via-red-900/60 to-pink-900/70" />
         </div>
+        <div className="relative z-10 flex h-full items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-white drop-shadow-2xl md:text-6xl">
+              Travel Packages
+            </h1>
+            <p className="mt-4 text-xl text-white drop-shadow-lg">
+              Discover our carefully curated travel packages for unforgettable experiences
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        {/* Active Filters Display */}
+        {hasFilters && (
+          <div className="mb-6 flex flex-wrap gap-3 items-center">
+            <span className="text-sm font-medium text-gray-700">Active filters:</span>
+            {destination && (
+              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium">
+                📍 {destination}
+              </span>
+            )}
+            {duration && (
+              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium">
+                📅 {duration} days
+              </span>
+            )}
+            {budget && (
+              <span className="rounded-full bg-blue-100 px-4 py-1 text-sm text-blue-800 font-medium capitalize">
+                💰 {budget}
+              </span>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Packages Grid */}

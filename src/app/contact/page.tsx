@@ -1,15 +1,27 @@
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-linear-to-r from-blue-600 to-blue-800 py-20 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold md:text-5xl">Get in Touch</h1>
-          <p className="mt-4 text-lg text-blue-100">
-            Have questions? We're here to help plan your perfect journey
-          </p>
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] w-full">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=90"
+            alt="Contact Us"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-linear-to-br from-green-900/70 via-teal-900/60 to-blue-900/70" />
         </div>
-      </div>
+        <div className="relative z-10 flex h-full items-center">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-white drop-shadow-2xl md:text-6xl">
+              Get in Touch
+            </h1>
+            <p className="mt-4 text-xl text-white drop-shadow-lg">
+              Have questions? We're here to help plan your perfect journey
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Contact Information */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

@@ -69,7 +69,7 @@ export default function StoryCard({ story }: StoryCardProps) {
 
           {/* Read More Link */}
           <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all duration-300">
-            <span className="group-hover:underline">Read Story</span>
+            <span className="group-hover:underline">Read More</span>
             <svg
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-2"
               fill="none"

@@ -10,13 +10,13 @@ import "swiper/css/effect-fade";
 const heroSlides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1920&q=80",
-    alt: "Taj Mahal at sunrise",
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=80",
+    alt: "Red Fort Delhi",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=1920&q=80",
-    alt: "Gateway of India Mumbai",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1920&q=80",
+    alt: "Taj Mahal Agra",
   },
   {
     id: 3,
@@ -25,28 +25,13 @@ const heroSlides = [
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1920&q=80",
-    alt: "Backwaters of Kerala",
+    image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1920&q=80",
+    alt: "City Palace Udaipur",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-    alt: "Himalayan mountains",
-  },
-  {
-    id: 6,
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=1920&q=80",
-    alt: "Beaches of Goa",
-  },
-  {
-    id: 7,
-    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80",
-    alt: "Varanasi Ghats",
-  },
-  {
-    id: 8,
-    image: "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1920&q=80",
-    alt: "Udaipur Palace",
+    image: "https://images.unsplash.com/photo-1620766182966-c6eb5ed2b788?w=1920&q=80",
+    alt: "Mehrangarh Fort Jodhpur",
   },
 ];
 
@@ -98,7 +83,7 @@ export default function HeroCarousel() {
             Explore India with Aureo Travel
           </h1>
           <p className="mt-6 text-xl text-white md:text-2xl drop-shadow-md">
-            Discover curated travel experiences across India's most iconic destinations
+            Discover the Golden Triangle and Rajasthan's royal heritage across Delhi, Agra, Jaipur, Udaipur, and Jodhpur
           </p>
         </div>
       </div>
